@@ -1,0 +1,400 @@
+:root {
+	--autoclub-locations-navy: #061827;
+	--autoclub-locations-blue: #071a36;
+	--autoclub-locations-gold: #f2b600;
+	--autoclub-locations-green: #169d5b;
+	--autoclub-locations-white: #ffffff;
+}
+
+body {
+	background: var(--autoclub-locations-navy);
+}
+
+.site-content,
+.site-content > .ast-container {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	background: var(--autoclub-locations-navy);
+}
+
+#primary.autoclub-locations-page {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.autoclub-locations-page,
+.autoclub-locations-page * {
+	box-sizing: border-box;
+}
+
+.autoclub-locations-page {
+	overflow: hidden;
+	background: var(--autoclub-locations-navy);
+	color: var(--autoclub-locations-white);
+}
+
+.autoclub-locations-page__inner,
+.autoclub-locations-hero__inner,
+.autoclub-locations-cta__inner {
+	width: min(100%, 1240px);
+	margin: 0 auto;
+}
+
+.autoclub-locations-hero {
+	position: relative;
+	display: grid;
+	align-items: end;
+	min-height: 560px;
+	padding: 5rem 1.25rem 4rem;
+	background:
+		linear-gradient(90deg, rgba(4, 17, 38, 0.52), rgba(4, 17, 38, 0.29) 52%, rgba(4, 17, 38, 0.025)),
+		linear-gradient(0deg, var(--autoclub-locations-navy), transparent 50%),
+		url("../images/locations/LINDOS.jfif") center 48% / cover no-repeat;
+	isolation: isolate;
+}
+
+.autoclub-locations-hero::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 120px;
+	background: linear-gradient(180deg, transparent, var(--autoclub-locations-navy));
+	content: "";
+	pointer-events: none;
+}
+
+.autoclub-locations-hero__inner {
+	position: relative;
+	z-index: 1;
+}
+
+.autoclub-locations-page__eyebrow {
+	margin: 0 0 0.65rem;
+	color: var(--autoclub-locations-gold);
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: 0.15em;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+.autoclub-locations-hero h1,
+.autoclub-locations-page__heading h2,
+.autoclub-locations-cta h2 {
+	margin: 0;
+	color: var(--autoclub-locations-white);
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	line-height: 1.06;
+}
+
+.autoclub-locations-hero h1 {
+	max-width: 820px;
+	font-size: clamp(2.35rem, 8vw, 5rem);
+}
+
+.autoclub-locations-hero__intro {
+	max-width: 760px;
+	margin: 1rem 0 0;
+	color: rgba(255, 255, 255, 0.76);
+	font-size: clamp(1rem, 2.5vw, 1.18rem);
+	line-height: 1.7;
+}
+
+.autoclub-locations-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	min-height: 44px;
+	margin-top: 1.15rem;
+	padding: 0.72rem 1.05rem;
+	border: 1px solid rgba(242, 182, 0, 0.4);
+	border-radius: 999px;
+	background: rgba(242, 182, 0, 0.1);
+	color: var(--autoclub-locations-white);
+	font-size: 0.84rem;
+	font-weight: 800;
+	line-height: 1.2;
+	text-decoration: none;
+	transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.autoclub-locations-button--primary {
+	border-color: rgba(85, 222, 160, 0.58);
+	background: linear-gradient(135deg, var(--autoclub-locations-green), #117848);
+	box-shadow: 0 12px 30px rgba(22, 157, 91, 0.24);
+}
+
+.autoclub-locations-list,
+.autoclub-locations-benefits {
+	padding: 3.5rem 1.25rem;
+	background: var(--autoclub-locations-navy);
+}
+
+.autoclub-locations-page__heading {
+	max-width: 820px;
+	margin-bottom: 1.5rem;
+}
+
+.autoclub-locations-page__heading h2,
+.autoclub-locations-cta h2 {
+	font-size: clamp(1.9rem, 6vw, 3.35rem);
+}
+
+.autoclub-locations-page__heading > p:last-child,
+.autoclub-locations-cta__inner > p:not(.autoclub-locations-page__eyebrow) {
+	max-width: 72ch;
+	margin: 0.85rem 0 0;
+	color: rgba(255, 255, 255, 0.68);
+	font-size: 1rem;
+	line-height: 1.65;
+}
+
+.autoclub-locations-page__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 1rem;
+}
+
+.autoclub-locations-page__card {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	overflow: hidden;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 22px;
+	background:
+		linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025)),
+		rgba(9, 35, 66, 0.58);
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(16px);
+}
+
+.autoclub-locations-page__media {
+	position: relative;
+	height: 230px;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.autoclub-locations-page__media::after {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, transparent, rgba(2, 11, 20, 0.12));
+	content: "";
+	pointer-events: none;
+}
+
+.autoclub-locations-page__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.4s ease;
+}
+
+.autoclub-locations-page__card-body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1.2rem;
+}
+
+.autoclub-locations-page__card h3 {
+	margin: 0;
+	color: var(--autoclub-locations-white);
+	font-size: 1.25rem;
+	font-weight: 800;
+	letter-spacing: -0.025em;
+	line-height: 1.25;
+}
+
+.autoclub-locations-page__card p {
+	flex: 1;
+	margin: 0.6rem 0 0;
+	color: rgba(255, 255, 255, 0.66);
+	font-size: 0.94rem;
+	line-height: 1.6;
+}
+
+.autoclub-locations-benefits {
+	padding-top: 1rem;
+}
+
+.autoclub-locations-page__heading--centered {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.autoclub-locations-benefits__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 0.75rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.autoclub-locations-benefits__grid li {
+	position: relative;
+	min-width: 0;
+	margin: 0;
+	padding: 0.9rem 1rem 0.9rem 2.6rem;
+	border: 1px solid rgba(255, 255, 255, 0.11);
+	border-radius: 15px;
+	background:
+		linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.02)),
+		rgba(9, 35, 66, 0.48);
+	color: rgba(255, 255, 255, 0.88);
+	font-size: 0.88rem;
+	font-weight: 800;
+	line-height: 1.35;
+}
+
+.autoclub-locations-benefits__grid li::before {
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	color: var(--autoclub-locations-gold);
+	content: "\2713";
+	transform: translateY(-50%);
+}
+
+.autoclub-locations-cta {
+	padding: 2rem 1.25rem 4rem;
+	background: var(--autoclub-locations-navy);
+}
+
+.autoclub-locations-cta__inner {
+	padding: 2rem 1.25rem;
+	border: 1px solid rgba(242, 182, 0, 0.18);
+	border-radius: 24px;
+	background:
+		radial-gradient(circle at 85% 20%, rgba(242, 182, 0, 0.14), transparent 34%),
+		linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+		rgba(9, 35, 66, 0.64);
+	box-shadow: 0 20px 48px rgba(0, 0, 0, 0.24);
+	text-align: center;
+}
+
+.autoclub-locations-cta__inner > p:not(.autoclub-locations-page__eyebrow) {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.autoclub-locations-cta .autoclub-locations-button {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 600px) {
+	.autoclub-locations-hero,
+	.autoclub-locations-list,
+	.autoclub-locations-benefits,
+	.autoclub-locations-cta {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+
+	.autoclub-locations-page__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.autoclub-locations-benefits__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 922px) {
+	.autoclub-locations-hero {
+		min-height: 660px;
+		padding-top: 7rem;
+		padding-bottom: 5rem;
+	}
+
+	.autoclub-locations-list,
+	.autoclub-locations-benefits {
+		padding-top: 4.5rem;
+		padding-bottom: 4.5rem;
+	}
+
+	.autoclub-locations-page__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1.25rem;
+	}
+
+	.autoclub-locations-page__media {
+		height: 310px;
+	}
+
+	.autoclub-locations-page__card-body {
+		padding: 1.4rem;
+	}
+
+	.autoclub-locations-benefits__grid {
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+	}
+
+	.autoclub-locations-page__card:hover {
+		border-color: rgba(242, 182, 0, 0.28);
+		box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
+		transform: translateY(-3px);
+	}
+
+	.autoclub-locations-page__card:hover .autoclub-locations-page__media img {
+		transform: scale(1.04);
+	}
+
+	.autoclub-locations-page__card,
+	.autoclub-locations-button {
+		transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+	}
+
+	.autoclub-locations-button:hover,
+	.autoclub-locations-button:focus {
+		border-color: rgba(242, 182, 0, 0.68);
+		color: var(--autoclub-locations-white);
+		transform: translateY(-2px);
+	}
+
+	.autoclub-locations-cta {
+		padding-bottom: 5rem;
+	}
+
+	.autoclub-locations-cta__inner {
+		padding: 3rem;
+	}
+}
+
+@media (max-width: 599px) {
+	.autoclub-locations-hero {
+		min-height: 520px;
+		background-position: 62% center;
+	}
+
+	.autoclub-locations-list,
+	.autoclub-locations-benefits {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+
+	.autoclub-locations-page__media {
+		height: 220px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.autoclub-locations-page__card,
+	.autoclub-locations-page__media img,
+	.autoclub-locations-button {
+		transition: none;
+	}
+}

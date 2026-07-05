@@ -1,0 +1,517 @@
+:root {
+	--fleet-navy: #061827;
+	--fleet-blue: #071a36;
+	--fleet-gold: #f2b600;
+	--fleet-green: #169d5b;
+	--fleet-white: #fff;
+}
+
+body,
+.site-content,
+.site-content > .ast-container {
+	background: var(--fleet-navy);
+}
+
+.site-content,
+.site-content > .ast-container {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+}
+
+#primary.autoclub-fleet-page {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.autoclub-fleet-page,
+.autoclub-fleet-page * {
+	box-sizing: border-box;
+}
+
+.autoclub-fleet-page {
+	overflow: hidden;
+	background: var(--fleet-navy);
+	color: var(--fleet-white);
+}
+
+.autoclub-fleet-inner,
+.autoclub-fleet-hero__inner,
+.autoclub-fleet-final-cta__inner {
+	width: min(100%, 1240px);
+	margin: 0 auto;
+}
+
+.autoclub-fleet-hero {
+	position: relative;
+	display: grid;
+	align-items: end;
+	min-height: 540px;
+	padding: 5rem 1.25rem 4rem;
+	background:
+		linear-gradient(90deg, rgba(4, 17, 38, 0.52), rgba(4, 17, 38, 0.29) 55%, rgba(4, 17, 38, 0.025)),
+		linear-gradient(0deg, var(--fleet-navy), transparent 52%),
+		url("../images/cars/family-suv.webp.png") center 58% / cover no-repeat;
+	isolation: isolate;
+}
+
+.autoclub-fleet-hero::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 125px;
+	background: linear-gradient(180deg, transparent, var(--fleet-navy));
+	content: "";
+	pointer-events: none;
+}
+
+.autoclub-fleet-hero__inner {
+	position: relative;
+	z-index: 1;
+}
+
+.autoclub-fleet-eyebrow {
+	margin: 0 0 0.65rem;
+	color: var(--fleet-gold);
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: 0.15em;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+.autoclub-fleet-hero h1,
+.autoclub-fleet-heading h2,
+.autoclub-fleet-final-cta h2 {
+	margin: 0;
+	color: var(--fleet-white);
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	line-height: 1.06;
+}
+
+.autoclub-fleet-hero h1 {
+	max-width: 850px;
+	font-size: clamp(2.35rem, 8vw, 5rem);
+}
+
+.autoclub-fleet-hero__subtitle {
+	max-width: 790px;
+	margin: 1rem 0 0;
+	color: rgba(255, 255, 255, 0.78);
+	font-size: clamp(1rem, 2.5vw, 1.18rem);
+	line-height: 1.7;
+}
+
+.autoclub-fleet-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	min-height: 44px;
+	margin-top: 1.1rem;
+	padding: 0.72rem 1.05rem;
+	border: 1px solid rgba(242, 182, 0, 0.4);
+	border-radius: 999px;
+	background: rgba(242, 182, 0, 0.1);
+	color: var(--fleet-white);
+	font-size: 0.84rem;
+	font-weight: 800;
+	line-height: 1.2;
+	text-decoration: none;
+	transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.autoclub-fleet-button--primary {
+	border-color: rgba(85, 222, 160, 0.58);
+	background: linear-gradient(135deg, var(--fleet-green), #117848);
+	box-shadow: 0 12px 30px rgba(22, 157, 91, 0.24);
+}
+
+.autoclub-fleet-list,
+.autoclub-fleet-trust,
+.autoclub-fleet-final-cta {
+	padding-right: 1.25rem;
+	padding-left: 1.25rem;
+	background: var(--fleet-navy);
+}
+
+.autoclub-fleet-list,
+.autoclub-fleet-trust {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.autoclub-fleet-heading {
+	max-width: 850px;
+	margin-bottom: 1.5rem;
+}
+
+.autoclub-fleet-heading h2,
+.autoclub-fleet-final-cta h2 {
+	font-size: clamp(1.9rem, 6vw, 3.35rem);
+}
+
+.autoclub-fleet-heading > p:last-child {
+	max-width: 76ch;
+	margin: 0.85rem 0 0;
+	color: rgba(255, 255, 255, 0.68);
+	font-size: 1rem;
+	line-height: 1.65;
+}
+
+.autoclub-fleet-filter > input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+.autoclub-fleet-filter__controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.55rem;
+	margin-bottom: 1.5rem;
+}
+
+.autoclub-fleet-filter__controls label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 40px;
+	padding: 0.62rem 0.9rem;
+	border: 1px solid rgba(255, 255, 255, 0.13);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.055);
+	color: rgba(255, 255, 255, 0.78);
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: 800;
+	line-height: 1.2;
+	transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+#fleet-filter-all:checked ~ .autoclub-fleet-filter__controls label[for="fleet-filter-all"],
+#fleet-filter-economy:checked ~ .autoclub-fleet-filter__controls label[for="fleet-filter-economy"],
+#fleet-filter-automatic:checked ~ .autoclub-fleet-filter__controls label[for="fleet-filter-automatic"],
+#fleet-filter-cabrio:checked ~ .autoclub-fleet-filter__controls label[for="fleet-filter-cabrio"],
+#fleet-filter-suv:checked ~ .autoclub-fleet-filter__controls label[for="fleet-filter-suv"],
+#fleet-filter-family:checked ~ .autoclub-fleet-filter__controls label[for="fleet-filter-family"] {
+	border-color: rgba(242, 182, 0, 0.5);
+	background: rgba(242, 182, 0, 0.14);
+	color: var(--fleet-white);
+}
+
+#fleet-filter-economy:checked ~ .autoclub-fleet-grid .autoclub-fleet-card:not([data-categories~="economy"]),
+#fleet-filter-automatic:checked ~ .autoclub-fleet-grid .autoclub-fleet-card:not([data-categories~="automatic"]),
+#fleet-filter-cabrio:checked ~ .autoclub-fleet-grid .autoclub-fleet-card:not([data-categories~="cabrio"]),
+#fleet-filter-suv:checked ~ .autoclub-fleet-grid .autoclub-fleet-card:not([data-categories~="suv"]),
+#fleet-filter-family:checked ~ .autoclub-fleet-grid .autoclub-fleet-card:not([data-categories~="family"]) {
+	display: none;
+}
+
+.autoclub-fleet-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 1rem;
+}
+
+.autoclub-fleet-card {
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	overflow: hidden;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 22px;
+	background:
+		linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.025)),
+		rgba(9, 35, 66, 0.58);
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(16px);
+}
+
+.autoclub-fleet-card__media {
+	position: relative;
+	height: 215px;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	background:
+		radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.12), transparent 42%),
+		linear-gradient(145deg, #102847, #061220);
+}
+
+.autoclub-fleet-card__media::after {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, transparent 62%, rgba(2, 11, 20, 0.2));
+	content: "";
+	pointer-events: none;
+}
+
+.autoclub-fleet-card__media img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center 65%;
+	transition: transform 0.4s ease;
+}
+
+.autoclub-fleet-card__media--missing {
+	display: grid;
+	place-items: center;
+	padding: 1rem;
+	color: rgba(255, 255, 255, 0.45);
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.autoclub-fleet-card__body {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1.15rem;
+}
+
+.autoclub-fleet-card__badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin-bottom: 0.7rem;
+}
+
+.autoclub-fleet-card__badges span {
+	padding: 0.34rem 0.55rem;
+	border: 1px solid rgba(242, 182, 0, 0.22);
+	border-radius: 999px;
+	background: rgba(242, 182, 0, 0.08);
+	color: rgba(255, 255, 255, 0.84);
+	font-size: 0.68rem;
+	font-weight: 800;
+	line-height: 1.2;
+}
+
+.autoclub-fleet-card h3 {
+	margin: 0;
+	color: var(--fleet-white);
+	font-size: 1.28rem;
+	font-weight: 800;
+	letter-spacing: -0.025em;
+	line-height: 1.25;
+}
+
+.autoclub-fleet-card__specs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.42rem;
+	margin: 0.75rem 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.autoclub-fleet-card__specs li {
+	margin: 0;
+	padding: 0.35rem 0.5rem;
+	border: 1px solid rgba(255, 255, 255, 0.09);
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.045);
+	color: rgba(255, 255, 255, 0.72);
+	font-size: 0.7rem;
+	font-weight: 700;
+	line-height: 1.25;
+}
+
+.autoclub-fleet-card__body > p {
+	flex: 1;
+	margin: 0.75rem 0 0;
+	color: rgba(255, 255, 255, 0.66);
+	font-size: 0.91rem;
+	line-height: 1.58;
+}
+
+.autoclub-fleet-trust {
+	padding-top: 1rem;
+}
+
+.autoclub-fleet-heading--centered {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.autoclub-fleet-trust__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 0.7rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.autoclub-fleet-trust__grid li {
+	position: relative;
+	min-width: 0;
+	margin: 0;
+	padding: 0.9rem 1rem 0.9rem 2.55rem;
+	border: 1px solid rgba(255, 255, 255, 0.11);
+	border-radius: 15px;
+	background:
+		linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.02)),
+		rgba(9, 35, 66, 0.48);
+	color: rgba(255, 255, 255, 0.88);
+	font-size: 0.88rem;
+	font-weight: 800;
+	line-height: 1.35;
+}
+
+.autoclub-fleet-trust__grid li::before {
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	color: var(--fleet-gold);
+	content: "\2713";
+	transform: translateY(-50%);
+}
+
+.autoclub-fleet-final-cta {
+	padding-top: 1rem;
+	padding-bottom: 4rem;
+}
+
+.autoclub-fleet-final-cta__inner {
+	padding: 2rem 1.25rem;
+	border: 1px solid rgba(242, 182, 0, 0.18);
+	border-radius: 24px;
+	background:
+		radial-gradient(circle at 85% 20%, rgba(242, 182, 0, 0.14), transparent 34%),
+		linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+		rgba(9, 35, 66, 0.64);
+	box-shadow: 0 20px 48px rgba(0, 0, 0, 0.24);
+	text-align: center;
+}
+
+.autoclub-fleet-final-cta .autoclub-fleet-button {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 600px) {
+	.autoclub-fleet-hero,
+	.autoclub-fleet-list,
+	.autoclub-fleet-trust,
+	.autoclub-fleet-final-cta {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+
+	.autoclub-fleet-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.autoclub-fleet-trust__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 922px) {
+	.autoclub-fleet-hero {
+		min-height: 640px;
+		padding-top: 7rem;
+		padding-bottom: 5rem;
+		background-position: center 58%;
+	}
+
+	.autoclub-fleet-list,
+	.autoclub-fleet-trust {
+		padding-top: 4.25rem;
+		padding-bottom: 4.25rem;
+	}
+
+	.autoclub-fleet-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.15rem;
+	}
+
+	.autoclub-fleet-card__media {
+		height: 235px;
+	}
+
+	.autoclub-fleet-trust__grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+	.autoclub-fleet-card,
+	.autoclub-fleet-filter__controls label {
+		transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+	}
+
+	.autoclub-fleet-card:hover {
+		border-color: rgba(242, 182, 0, 0.28);
+		box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
+		transform: translateY(-3px);
+	}
+
+	.autoclub-fleet-card:hover .autoclub-fleet-card__media img {
+		transform: scale(1.04);
+	}
+
+	.autoclub-fleet-filter__controls label:hover {
+		border-color: rgba(242, 182, 0, 0.35);
+		color: var(--fleet-white);
+	}
+
+	.autoclub-fleet-button:hover,
+	.autoclub-fleet-button:focus {
+		border-color: rgba(242, 182, 0, 0.68);
+		color: var(--fleet-white);
+		transform: translateY(-2px);
+	}
+
+	.autoclub-fleet-final-cta {
+		padding-bottom: 5rem;
+	}
+
+	.autoclub-fleet-final-cta__inner {
+		padding: 3rem;
+	}
+}
+
+@media (max-width: 599px) {
+	.autoclub-fleet-hero {
+		min-height: 510px;
+		background-position: 58% center;
+	}
+
+	.autoclub-fleet-list,
+	.autoclub-fleet-trust {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+	}
+
+	.autoclub-fleet-filter__controls {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.autoclub-fleet-filter__controls label {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.autoclub-fleet-card,
+	.autoclub-fleet-card__media img,
+	.autoclub-fleet-button,
+	.autoclub-fleet-filter__controls label {
+		transition: none;
+	}
+}

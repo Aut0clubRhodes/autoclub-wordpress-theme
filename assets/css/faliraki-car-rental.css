@@ -1,0 +1,454 @@
+:root {
+	--faliraki-navy: #061827;
+	--faliraki-blue: #071a36;
+	--faliraki-gold: #f2b600;
+	--faliraki-green: #169d5b;
+	--faliraki-white: #ffffff;
+}
+
+body {
+	background: var(--faliraki-navy);
+}
+
+.site-content,
+.site-content > .ast-container {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	background: var(--faliraki-navy);
+}
+
+#primary.autoclub-faliraki-page {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.autoclub-faliraki-page,
+.autoclub-faliraki-page * {
+	box-sizing: border-box;
+}
+
+.autoclub-faliraki-page {
+	overflow: hidden;
+	background: var(--faliraki-navy);
+	color: var(--faliraki-white);
+}
+
+.autoclub-faliraki-inner,
+.autoclub-faliraki-hero__inner,
+.autoclub-faliraki-content__inner,
+.autoclub-faliraki-faq__inner,
+.autoclub-faliraki-final-cta__inner {
+	width: min(100%, 1200px);
+	margin: 0 auto;
+}
+
+.autoclub-faliraki-hero {
+	position: relative;
+	display: grid;
+	align-items: end;
+	min-height: 540px;
+	padding: 4.75rem 1.25rem 3.75rem;
+	background:
+		linear-gradient(90deg, rgba(4, 17, 38, 0.52), rgba(4, 17, 38, 0.29) 54%, rgba(4, 17, 38, 0.025)),
+		linear-gradient(0deg, var(--faliraki-navy), transparent 52%),
+		url("../images/locations/FALIRAKI.jfif") center / cover no-repeat;
+	isolation: isolate;
+}
+
+.autoclub-faliraki-hero::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 125px;
+	background: linear-gradient(180deg, transparent, var(--faliraki-navy));
+	content: "";
+	pointer-events: none;
+}
+
+.autoclub-faliraki-hero__inner {
+	position: relative;
+	z-index: 1;
+}
+
+.autoclub-faliraki-eyebrow {
+	margin: 0 0 0.62rem;
+	color: var(--faliraki-gold);
+	font-size: 0.74rem;
+	font-weight: 800;
+	letter-spacing: 0.15em;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+.autoclub-faliraki-hero h1,
+.autoclub-faliraki-heading h2,
+.autoclub-faliraki-content h2,
+.autoclub-faliraki-final-cta h2 {
+	margin: 0;
+	color: var(--faliraki-white);
+	font-weight: 800;
+	letter-spacing: -0.04em;
+	line-height: 1.07;
+}
+
+.autoclub-faliraki-hero h1 {
+	max-width: 760px;
+	font-size: clamp(2.35rem, 8vw, 4.85rem);
+}
+
+.autoclub-faliraki-hero__subtitle {
+	max-width: 720px;
+	margin: 0.95rem 0 0;
+	color: rgba(255, 255, 255, 0.78);
+	font-size: clamp(1rem, 2.6vw, 1.18rem);
+	line-height: 1.68;
+}
+
+.autoclub-faliraki-button,
+.autoclub-faliraki-link-card a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	min-height: 44px;
+	margin-top: 1.1rem;
+	padding: 0.72rem 1.05rem;
+	border: 1px solid rgba(242, 182, 0, 0.38);
+	border-radius: 999px;
+	background: rgba(242, 182, 0, 0.1);
+	color: var(--faliraki-white);
+	font-size: 0.84rem;
+	font-weight: 800;
+	line-height: 1.2;
+	text-decoration: none;
+	transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.autoclub-faliraki-button--primary {
+	border-color: rgba(85, 222, 160, 0.58);
+	background: linear-gradient(135deg, var(--faliraki-green), #117848);
+	box-shadow: 0 12px 28px rgba(22, 157, 91, 0.22);
+}
+
+.autoclub-faliraki-benefits,
+.autoclub-faliraki-content,
+.autoclub-faliraki-places,
+.autoclub-faliraki-faq,
+.autoclub-faliraki-links,
+.autoclub-faliraki-final-cta {
+	padding-right: 1.25rem;
+	padding-left: 1.25rem;
+	background: var(--faliraki-navy);
+}
+
+.autoclub-faliraki-benefits {
+	position: relative;
+	z-index: 2;
+	padding-top: 0;
+	padding-bottom: 2.75rem;
+}
+
+.autoclub-faliraki-benefits__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 0.7rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.autoclub-faliraki-benefits__grid li,
+.autoclub-faliraki-place-card,
+.autoclub-faliraki-link-card {
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	background:
+		linear-gradient(145deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.022)),
+		rgba(9, 35, 66, 0.56);
+	box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+	backdrop-filter: blur(14px);
+}
+
+.autoclub-faliraki-benefits__grid li {
+	position: relative;
+	min-width: 0;
+	margin: 0;
+	padding: 0.88rem 1rem 0.88rem 2.55rem;
+	border-radius: 15px;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 0.88rem;
+	font-weight: 800;
+	line-height: 1.35;
+}
+
+.autoclub-faliraki-benefits__grid li::before {
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	color: var(--faliraki-gold);
+	content: "\2713";
+	transform: translateY(-50%);
+}
+
+.autoclub-faliraki-content,
+.autoclub-faliraki-places,
+.autoclub-faliraki-faq,
+.autoclub-faliraki-links {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.autoclub-faliraki-heading {
+	max-width: 830px;
+	margin-bottom: 1.35rem;
+}
+
+.autoclub-faliraki-heading h2,
+.autoclub-faliraki-content h2,
+.autoclub-faliraki-final-cta h2 {
+	font-size: clamp(1.85rem, 6vw, 3.25rem);
+}
+
+.autoclub-faliraki-content__inner {
+	padding: 1.5rem;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 23px;
+	background:
+		radial-gradient(circle at 92% 5%, rgba(242, 182, 0, 0.08), transparent 25%),
+		linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.015)),
+		rgba(9, 35, 66, 0.42);
+	box-shadow: 0 18px 46px rgba(0, 0, 0, 0.19);
+}
+
+.autoclub-faliraki-content__copy {
+	max-width: 87ch;
+	margin-top: 1.1rem;
+}
+
+.autoclub-faliraki-content__copy p {
+	margin: 0 0 1rem;
+	color: rgba(255, 255, 255, 0.72);
+	font-size: 1rem;
+	line-height: 1.73;
+}
+
+.autoclub-faliraki-content__copy p:last-child {
+	margin-bottom: 0;
+}
+
+.autoclub-faliraki-places__grid,
+.autoclub-faliraki-links__grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 0.9rem;
+}
+
+.autoclub-faliraki-place-card,
+.autoclub-faliraki-link-card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-width: 0;
+	padding: 1.1rem;
+	border-radius: 18px;
+}
+
+.autoclub-faliraki-place-card h3,
+.autoclub-faliraki-link-card h3 {
+	margin: 0;
+	color: var(--faliraki-white);
+	font-size: 1.12rem;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	line-height: 1.3;
+}
+
+.autoclub-faliraki-place-card p,
+.autoclub-faliraki-link-card p {
+	flex: 1;
+	margin: 0.5rem 0 0;
+	color: rgba(255, 255, 255, 0.66);
+	font-size: 0.91rem;
+	line-height: 1.58;
+}
+
+.autoclub-faliraki-faq__inner {
+	max-width: 950px;
+}
+
+.autoclub-faliraki-faq__list {
+	display: grid;
+	gap: 0.72rem;
+}
+
+.autoclub-faliraki-faq__item {
+	margin: 0;
+	overflow: hidden;
+	border: 1px solid rgba(255, 255, 255, 0.11);
+	border-radius: 16px;
+	background:
+		linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.02)),
+		rgba(9, 35, 66, 0.46);
+}
+
+.autoclub-faliraki-faq__item summary {
+	position: relative;
+	padding: 1rem 3rem 1rem 1rem;
+	color: var(--faliraki-white);
+	cursor: pointer;
+	font-size: 0.98rem;
+	font-weight: 800;
+	line-height: 1.4;
+	list-style: none;
+}
+
+.autoclub-faliraki-faq__item summary::-webkit-details-marker {
+	display: none;
+}
+
+.autoclub-faliraki-faq__item summary::after {
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	display: grid;
+	place-items: center;
+	width: 28px;
+	height: 28px;
+	border: 1px solid rgba(242, 182, 0, 0.22);
+	border-radius: 9px;
+	color: var(--faliraki-gold);
+	content: "+";
+	transform: translateY(-50%);
+}
+
+.autoclub-faliraki-faq__item[open] summary::after {
+	content: "\2212";
+}
+
+.autoclub-faliraki-faq__item p {
+	margin: 0;
+	padding: 0 1rem 1rem;
+	color: rgba(255, 255, 255, 0.68);
+	font-size: 0.93rem;
+	line-height: 1.62;
+}
+
+.autoclub-faliraki-final-cta {
+	padding-top: 1rem;
+	padding-bottom: 4rem;
+}
+
+.autoclub-faliraki-final-cta__inner {
+	padding: 2rem 1.25rem;
+	border: 1px solid rgba(242, 182, 0, 0.2);
+	border-radius: 24px;
+	background:
+		radial-gradient(circle at 85% 20%, rgba(242, 182, 0, 0.14), transparent 35%),
+		linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.02)),
+		rgba(9, 35, 66, 0.63);
+	box-shadow: 0 20px 48px rgba(0, 0, 0, 0.22);
+	text-align: center;
+}
+
+.autoclub-faliraki-final-cta .autoclub-faliraki-button {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 600px) {
+	.autoclub-faliraki-hero,
+	.autoclub-faliraki-benefits,
+	.autoclub-faliraki-content,
+	.autoclub-faliraki-places,
+	.autoclub-faliraki-faq,
+	.autoclub-faliraki-links,
+	.autoclub-faliraki-final-cta {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+
+	.autoclub-faliraki-benefits__grid,
+	.autoclub-faliraki-places__grid,
+	.autoclub-faliraki-links__grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 922px) {
+	.autoclub-faliraki-hero {
+		min-height: 640px;
+		padding-top: 6.25rem;
+		padding-bottom: 4.75rem;
+		background-position: center 52%;
+	}
+
+	.autoclub-faliraki-benefits {
+		margin-top: -1.25rem;
+	}
+
+	.autoclub-faliraki-benefits__grid,
+	.autoclub-faliraki-places__grid,
+	.autoclub-faliraki-links__grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+	.autoclub-faliraki-content,
+	.autoclub-faliraki-places,
+	.autoclub-faliraki-faq,
+	.autoclub-faliraki-links {
+		padding-top: 3.75rem;
+		padding-bottom: 3.75rem;
+	}
+
+	.autoclub-faliraki-content__inner {
+		padding: 2.25rem;
+	}
+
+	.autoclub-faliraki-place-card,
+	.autoclub-faliraki-link-card {
+		transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+	}
+
+	.autoclub-faliraki-place-card:hover,
+	.autoclub-faliraki-link-card:hover {
+		border-color: rgba(242, 182, 0, 0.28);
+		box-shadow: 0 20px 44px rgba(0, 0, 0, 0.25);
+		transform: translateY(-3px);
+	}
+
+	.autoclub-faliraki-button:hover,
+	.autoclub-faliraki-button:focus,
+	.autoclub-faliraki-link-card a:hover,
+	.autoclub-faliraki-link-card a:focus {
+		border-color: rgba(242, 182, 0, 0.68);
+		color: var(--faliraki-white);
+		transform: translateY(-2px);
+	}
+
+	.autoclub-faliraki-final-cta {
+		padding-bottom: 5rem;
+	}
+
+	.autoclub-faliraki-final-cta__inner {
+		padding: 2.8rem;
+	}
+}
+
+@media (max-width: 599px) {
+	.autoclub-faliraki-hero {
+		min-height: 510px;
+		background-position: 57% center;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.autoclub-faliraki-place-card,
+	.autoclub-faliraki-link-card,
+	.autoclub-faliraki-button,
+	.autoclub-faliraki-link-card a {
+		transition: none;
+	}
+}
