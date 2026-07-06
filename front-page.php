@@ -24,13 +24,14 @@ get_header();
 					<?php esc_html_e( 'Rent a Car Rhodes With Full Insurance & No Deposit', 'astra-child' ); ?>
 				</h1>
 
-				<p class="autoclub-hero__review"><?php esc_html_e( '★★★★★ 5.0/5 from 50+ travelers', 'astra-child' ); ?></p>
+				<p class="autoclub-hero__review"><?php esc_html_e( '★★★★★ 5.0/5 from 100+ travelers', 'astra-child' ); ?></p>
 				<p class="autoclub-hero__trust-line"><?php esc_html_e( 'Full Insurance • No Deposit • Airport Delivery', 'astra-child' ); ?></p>
 
 				<ul class="autoclub-hero__benefits" aria-label="<?php esc_attr_e( 'Rental benefits', 'astra-child' ); ?>">
-					<li><?php esc_html_e( 'Full Insurance Included', 'astra-child' ); ?></li>
-					<li><?php esc_html_e( 'Zero Excess', 'astra-child' ); ?></li>
-					<li><?php esc_html_e( 'Free Airport Delivery', 'astra-child' ); ?></li>
+					<li class="autoclub-hero__benefit autoclub-hero__benefit--insurance"><?php esc_html_e( 'Full Insurance Included', 'astra-child' ); ?></li>
+					<li class="autoclub-hero__benefit autoclub-hero__benefit--excess"><?php esc_html_e( 'Zero Excess', 'astra-child' ); ?></li>
+					<li class="autoclub-hero__benefit autoclub-hero__benefit--airport"><?php esc_html_e( 'Free Airport Delivery', 'astra-child' ); ?></li>
+					<li class="autoclub-hero__benefit autoclub-hero__benefit--support"><?php esc_html_e( 'Local Support 24/7', 'astra-child' ); ?></li>
 				</ul>
 			</div>
 
@@ -44,24 +45,25 @@ get_header();
 
 	<section class="autoclub-reviews" aria-labelledby="autoclub-reviews-title">
 		<div class="autoclub-reviews__inner">
-			<div class="autoclub-reviews__heading">
-				<p class="autoclub-reviews__eyebrow"><?php esc_html_e( 'Trusted by Travelers', 'astra-child' ); ?></p>
-				<h2 id="autoclub-reviews-title"><?php esc_html_e( 'Why Travelers Choose AutoClub Rhodes', 'astra-child' ); ?></h2>
-				<p><?php esc_html_e( 'Thousands of visitors choose AutoClub Rhodes for clear pricing, local support and stress-free car rental in Rhodes.', 'astra-child' ); ?></p>
-			</div>
-
-			<div class="autoclub-reviews__summary">
-				<div class="autoclub-reviews__rating">
-					<div class="autoclub-reviews__summary-stars" aria-label="<?php esc_attr_e( 'Five stars', 'astra-child' ); ?>">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-					<div class="autoclub-reviews__summary-copy">
-						<strong><?php esc_html_e( '5.0 Google Rating', 'astra-child' ); ?></strong>
-						<span><?php esc_html_e( '37 Verified Reviews', 'astra-child' ); ?></span>
-					</div>
+			<div class="autoclub-reviews__top">
+				<div class="autoclub-reviews__heading">
+					<p class="autoclub-reviews__eyebrow"><?php esc_html_e( 'Trusted by Travelers', 'astra-child' ); ?></p>
+					<h2 id="autoclub-reviews-title"><?php esc_html_e( 'Why Travelers Choose AutoClub Rhodes', 'astra-child' ); ?></h2>
+					<p><?php esc_html_e( 'Thousands of visitors choose AutoClub Rhodes for clear pricing, local support and stress-free car rental in Rhodes.', 'astra-child' ); ?></p>
 				</div>
-				<a class="autoclub-section-cta autoclub-reviews__cta" href="https://g.page/r/CYOr9zt3_-KVEBM/review" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Read More Reviews', 'astra-child' ); ?></a>
-			</div>
 
-			<div class="autoclub-reviews__quotes">
+				<div class="autoclub-reviews__proof-row">
+				<div class="autoclub-reviews__summary">
+					<div class="autoclub-reviews__rating">
+						<div class="autoclub-reviews__summary-stars" aria-label="<?php esc_attr_e( 'Five stars', 'astra-child' ); ?>">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+						<div class="autoclub-reviews__summary-copy">
+							<strong><?php esc_html_e( '5.0 Google Rating', 'astra-child' ); ?></strong>
+							<span><?php esc_html_e( 'Trusted by 100+ travelers', 'astra-child' ); ?></span>
+						</div>
+					</div>
+					<a class="autoclub-section-cta autoclub-reviews__cta" href="https://g.page/r/CYOr9zt3_-KVEBM/review" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Read More Reviews', 'astra-child' ); ?></a>
+				</div>
+
 				<figure class="autoclub-review-quote">
 					<div class="autoclub-review-quote__stars" aria-label="<?php esc_attr_e( 'Five stars', 'astra-child' ); ?>">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
 					<blockquote>
@@ -83,25 +85,26 @@ get_header();
 						<span><?php esc_html_e( 'Google Review', 'astra-child' ); ?></span>
 					</figcaption>
 				</figure>
+				</div>
 			</div>
 
 			<div class="autoclub-reviews__trust-grid">
 				<article class="autoclub-review-trust-card">
-					<span aria-hidden="true">&#128737;</span>
+					<span aria-hidden="true">&#10003;</span>
 					<h3><?php esc_html_e( 'Full Insurance Included', 'astra-child' ); ?></h3>
 					<p><?php esc_html_e( 'Drive with confidence thanks to full insurance and zero excess.', 'astra-child' ); ?></p>
 				</article>
 
 				<article class="autoclub-review-trust-card">
-					<span aria-hidden="true">&#9992;</span>
-					<h3><?php esc_html_e( 'Free Airport Delivery', 'astra-child' ); ?></h3>
-					<p><?php esc_html_e( 'Fast pickup at Rhodes Airport and selected hotels across the island.', 'astra-child' ); ?></p>
+					<span aria-hidden="true">&#10003;</span>
+					<h3><?php esc_html_e( 'Free Kilometers', 'astra-child' ); ?></h3>
+					<p><?php esc_html_e( 'Explore Rhodes with generous kilometer freedom for your holiday routes.', 'astra-child' ); ?></p>
 				</article>
 
 				<article class="autoclub-review-trust-card">
-					<span aria-hidden="true">&#127942;</span>
-					<h3><?php esc_html_e( 'Family Business Since 1982', 'astra-child' ); ?></h3>
-					<p><?php esc_html_e( 'More than 40 years of local experience serving visitors in Rhodes.', 'astra-child' ); ?></p>
+					<span aria-hidden="true">&#10003;</span>
+					<h3><?php esc_html_e( '24/7 Road Assistance', 'astra-child' ); ?></h3>
+					<p><?php esc_html_e( 'Local help is available if you need support while driving around Rhodes.', 'astra-child' ); ?></p>
 				</article>
 			</div>
 		</div>
@@ -225,28 +228,6 @@ get_header();
 			</div>
 
 			<a class="autoclub-section-cta autoclub-locations__cta" href="<?php echo esc_url( home_url( '/car-rental-rhodes-location/' ) ); ?>"><?php esc_html_e( 'View All Locations', 'astra-child' ); ?></a>
-		</div>
-	</section>
-
-	<section class="autoclub-why" aria-labelledby="autoclub-why-title">
-		<div class="autoclub-why__inner">
-			<div class="autoclub-why__content">
-				<p class="autoclub-why__eyebrow"><?php esc_html_e( 'Car rental made simple', 'astra-child' ); ?></p>
-				<h2 id="autoclub-why-title"><?php esc_html_e( 'Why Choose AutoClub for Rent a Car Rhodes', 'astra-child' ); ?></h2>
-				<p class="autoclub-why__text">
-					<?php esc_html_e( 'AutoClub Rhodes makes it simple to rent a car Rhodes visitors can rely on, with full insurance, zero excess, no deposit and free airport delivery. Whether you arrive at Rhodes Airport, stay in Rhodes Town, Faliraki, Lindos or nearby hotels, we provide clear prices, local support and a simple booking experience.', 'astra-child' ); ?>
-				</p>
-			</div>
-
-			<ul class="autoclub-why__trust-bar" aria-label="<?php esc_attr_e( 'AutoClub Rhodes rental benefits', 'astra-child' ); ?>">
-				<li><span aria-hidden="true">&#128737;</span><?php esc_html_e( 'No Deposit', 'astra-child' ); ?></li>
-				<li><span aria-hidden="true">&#9989;</span><?php esc_html_e( 'Zero Excess', 'astra-child' ); ?></li>
-				<li><span aria-hidden="true">&#128663;</span><?php esc_html_e( 'Full Insurance Included', 'astra-child' ); ?></li>
-				<li><span aria-hidden="true">&#9992;</span><?php esc_html_e( 'Free Airport Delivery', 'astra-child' ); ?></li>
-				<li><span aria-hidden="true">&#128205;</span><?php esc_html_e( 'Local Rhodes Support', 'astra-child' ); ?></li>
-			</ul>
-
-			<a class="autoclub-section-cta" href="<?php echo esc_url( home_url( '/about-us/' ) ); ?>"><?php esc_html_e( 'Learn More About AutoClub', 'astra-child' ); ?></a>
 		</div>
 	</section>
 

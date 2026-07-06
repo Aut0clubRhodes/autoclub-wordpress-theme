@@ -451,3 +451,78 @@ body {
 		transition: none;
 	}
 }
+
+/* Final global visual polish: light public content, stronger CTAs. */
+body,
+.site-content,
+.site-content > .ast-container,
+#primary.autoclub-kolymbia-page,
+.autoclub-kolymbia-page,
+.autoclub-kolymbia-benefits,
+.autoclub-kolymbia-content,
+.autoclub-kolymbia-places,
+.autoclub-kolymbia-faq,
+.autoclub-kolymbia-links,
+.autoclub-kolymbia-final-cta {
+	background: #fff;
+	color: #10223d;
+}
+
+.autoclub-kolymbia-hero::after {
+	background: linear-gradient(180deg, transparent, #fff);
+}
+
+.autoclub-kolymbia-heading h2,
+.autoclub-kolymbia-content h2,
+.autoclub-kolymbia-final-cta h2,
+.autoclub-kolymbia-place-card h3,
+.autoclub-kolymbia-link-card h3,
+.autoclub-kolymbia-faq__item summary {
+	color: var(--kolymbia-blue);
+}
+
+.autoclub-kolymbia-content__copy p,
+.autoclub-kolymbia-place-card p,
+.autoclub-kolymbia-link-card p,
+.autoclub-kolymbia-faq__item p,
+.autoclub-kolymbia-benefits__grid li {
+	color: rgba(16, 34, 61, 0.68);
+}
+
+.autoclub-kolymbia-benefits__grid li,
+.autoclub-kolymbia-content__inner,
+.autoclub-kolymbia-place-card,
+.autoclub-kolymbia-link-card,
+.autoclub-kolymbia-faq__item,
+.autoclub-kolymbia-final-cta__inner {
+	border-color: rgba(10, 32, 64, 0.1);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 251, 255, 0.98));
+	box-shadow: 0 18px 46px rgba(10, 32, 64, 0.1);
+}
+
+.autoclub-kolymbia-button,
+.autoclub-kolymbia-link-card a {
+	border: 2px solid rgba(7, 26, 54, 0.12);
+	background: linear-gradient(135deg, #ffd43b, #f2b600);
+	color: var(--kolymbia-blue);
+	box-shadow: 0 12px 28px rgba(242, 182, 0, 0.24);
+}
+
+.autoclub-kolymbia-button--primary {
+	border-color: rgba(22, 157, 91, 0.58);
+	background: linear-gradient(135deg, var(--kolymbia-green), #117848);
+	color: #fff;
+}
+
+.autoclub-kolymbia-button:hover,
+.autoclub-kolymbia-button:focus,
+.autoclub-kolymbia-link-card a:hover,
+.autoclub-kolymbia-link-card a:focus {
+	filter: brightness(1.04);
+	transform: translateY(-1px);
+}
+
+.autoclub-kolymbia-hero::after {
+	height: 55px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.82));
+}

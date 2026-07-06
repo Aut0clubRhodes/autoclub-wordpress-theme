@@ -452,3 +452,78 @@ body {
 		transition: none;
 	}
 }
+
+/* Final global visual polish: light public content, stronger CTAs. */
+body,
+.site-content,
+.site-content > .ast-container,
+#primary.autoclub-ixia-page,
+.autoclub-ixia-page,
+.autoclub-ixia-benefits,
+.autoclub-ixia-content,
+.autoclub-ixia-places,
+.autoclub-ixia-faq,
+.autoclub-ixia-links,
+.autoclub-ixia-final-cta {
+	background: #fff;
+	color: #10223d;
+}
+
+.autoclub-ixia-hero::after {
+	background: linear-gradient(180deg, transparent, #fff);
+}
+
+.autoclub-ixia-heading h2,
+.autoclub-ixia-content h2,
+.autoclub-ixia-final-cta h2,
+.autoclub-ixia-place-card h3,
+.autoclub-ixia-link-card h3,
+.autoclub-ixia-faq__item summary {
+	color: var(--ixia-blue);
+}
+
+.autoclub-ixia-content__copy p,
+.autoclub-ixia-place-card p,
+.autoclub-ixia-link-card p,
+.autoclub-ixia-faq__item p,
+.autoclub-ixia-benefits__grid li {
+	color: rgba(16, 34, 61, 0.68);
+}
+
+.autoclub-ixia-benefits__grid li,
+.autoclub-ixia-content__inner,
+.autoclub-ixia-place-card,
+.autoclub-ixia-link-card,
+.autoclub-ixia-faq__item,
+.autoclub-ixia-final-cta__inner {
+	border-color: rgba(10, 32, 64, 0.1);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 251, 255, 0.98));
+	box-shadow: 0 18px 46px rgba(10, 32, 64, 0.1);
+}
+
+.autoclub-ixia-button,
+.autoclub-ixia-link-card a {
+	border: 2px solid rgba(7, 26, 54, 0.12);
+	background: linear-gradient(135deg, #ffd43b, #f2b600);
+	color: var(--ixia-blue);
+	box-shadow: 0 12px 28px rgba(242, 182, 0, 0.24);
+}
+
+.autoclub-ixia-button--primary {
+	border-color: rgba(22, 157, 91, 0.58);
+	background: linear-gradient(135deg, var(--ixia-green), #117848);
+	color: #fff;
+}
+
+.autoclub-ixia-button:hover,
+.autoclub-ixia-button:focus,
+.autoclub-ixia-link-card a:hover,
+.autoclub-ixia-link-card a:focus {
+	filter: brightness(1.04);
+	transform: translateY(-1px);
+}
+
+.autoclub-ixia-hero::after {
+	height: 55px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.82));
+}

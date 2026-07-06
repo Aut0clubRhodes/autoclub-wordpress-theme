@@ -222,6 +222,17 @@ add_action(
 				file_exists( $fleet_styles ) ? filemtime( $fleet_styles ) : wp_get_theme()->get( 'Version' )
 			);
 		}
+
+		if ( is_page( 'manage-booking' ) ) {
+			$manage_booking_styles = get_stylesheet_directory() . '/assets/css/manage-booking.css';
+
+			wp_enqueue_style(
+				'autoclub-manage-booking',
+				get_stylesheet_directory_uri() . '/assets/css/manage-booking.css',
+				array( 'astra-child-style' ),
+				file_exists( $manage_booking_styles ) ? filemtime( $manage_booking_styles ) : wp_get_theme()->get( 'Version' )
+			);
+		}
 	}
 );
 

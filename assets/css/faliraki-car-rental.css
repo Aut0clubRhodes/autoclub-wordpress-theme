@@ -452,3 +452,78 @@ body {
 		transition: none;
 	}
 }
+
+/* Final global visual polish: light public content, stronger CTAs. */
+body,
+.site-content,
+.site-content > .ast-container,
+#primary.autoclub-faliraki-page,
+.autoclub-faliraki-page,
+.autoclub-faliraki-benefits,
+.autoclub-faliraki-content,
+.autoclub-faliraki-places,
+.autoclub-faliraki-faq,
+.autoclub-faliraki-links,
+.autoclub-faliraki-final-cta {
+	background: #fff;
+	color: #10223d;
+}
+
+.autoclub-faliraki-hero::after {
+	background: linear-gradient(180deg, transparent, #fff);
+}
+
+.autoclub-faliraki-heading h2,
+.autoclub-faliraki-content h2,
+.autoclub-faliraki-final-cta h2,
+.autoclub-faliraki-place-card h3,
+.autoclub-faliraki-link-card h3,
+.autoclub-faliraki-faq__item summary {
+	color: var(--faliraki-blue);
+}
+
+.autoclub-faliraki-content__copy p,
+.autoclub-faliraki-place-card p,
+.autoclub-faliraki-link-card p,
+.autoclub-faliraki-faq__item p,
+.autoclub-faliraki-benefits__grid li {
+	color: rgba(16, 34, 61, 0.68);
+}
+
+.autoclub-faliraki-benefits__grid li,
+.autoclub-faliraki-content__inner,
+.autoclub-faliraki-place-card,
+.autoclub-faliraki-link-card,
+.autoclub-faliraki-faq__item,
+.autoclub-faliraki-final-cta__inner {
+	border-color: rgba(10, 32, 64, 0.1);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 251, 255, 0.98));
+	box-shadow: 0 18px 46px rgba(10, 32, 64, 0.1);
+}
+
+.autoclub-faliraki-button,
+.autoclub-faliraki-link-card a {
+	border: 2px solid rgba(7, 26, 54, 0.12);
+	background: linear-gradient(135deg, #ffd43b, #f2b600);
+	color: var(--faliraki-blue);
+	box-shadow: 0 12px 28px rgba(242, 182, 0, 0.24);
+}
+
+.autoclub-faliraki-button--primary {
+	border-color: rgba(22, 157, 91, 0.58);
+	background: linear-gradient(135deg, var(--faliraki-green), #117848);
+	color: #fff;
+}
+
+.autoclub-faliraki-button:hover,
+.autoclub-faliraki-button:focus,
+.autoclub-faliraki-link-card a:hover,
+.autoclub-faliraki-link-card a:focus {
+	filter: brightness(1.04);
+	transform: translateY(-1px);
+}
+
+.autoclub-faliraki-hero::after {
+	height: 55px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.82));
+}

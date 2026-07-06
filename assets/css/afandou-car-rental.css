@@ -452,3 +452,78 @@ body,
 		transition: none;
 	}
 }
+
+/* Final global visual polish: light public content, stronger CTAs. */
+body,
+.site-content,
+.site-content > .ast-container,
+#primary.autoclub-afandou-page,
+.autoclub-afandou-page,
+.autoclub-afandou-benefits,
+.autoclub-afandou-content,
+.autoclub-afandou-places,
+.autoclub-afandou-faq,
+.autoclub-afandou-links,
+.autoclub-afandou-final-cta {
+	background: #fff;
+	color: #10223d;
+}
+
+.autoclub-afandou-hero::after {
+	background: linear-gradient(180deg, transparent, #fff);
+}
+
+.autoclub-afandou-heading h2,
+.autoclub-afandou-content h2,
+.autoclub-afandou-final-cta h2,
+.autoclub-afandou-place-card h3,
+.autoclub-afandou-link-card h3,
+.autoclub-afandou-faq__item summary {
+	color: var(--afandou-blue);
+}
+
+.autoclub-afandou-content__copy p,
+.autoclub-afandou-place-card p,
+.autoclub-afandou-link-card p,
+.autoclub-afandou-faq__item p,
+.autoclub-afandou-benefits__grid li {
+	color: rgba(16, 34, 61, 0.68);
+}
+
+.autoclub-afandou-benefits__grid li,
+.autoclub-afandou-content__inner,
+.autoclub-afandou-place-card,
+.autoclub-afandou-link-card,
+.autoclub-afandou-faq__item,
+.autoclub-afandou-final-cta__inner {
+	border-color: rgba(10, 32, 64, 0.1);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.99), rgba(248, 251, 255, 0.98));
+	box-shadow: 0 18px 46px rgba(10, 32, 64, 0.1);
+}
+
+.autoclub-afandou-button,
+.autoclub-afandou-link-card a {
+	border: 2px solid rgba(7, 26, 54, 0.12);
+	background: linear-gradient(135deg, #ffd43b, #f2b600);
+	color: var(--afandou-blue);
+	box-shadow: 0 12px 28px rgba(242, 182, 0, 0.24);
+}
+
+.autoclub-afandou-button--primary {
+	border-color: rgba(22, 157, 91, 0.58);
+	background: linear-gradient(135deg, var(--afandou-green), #117848);
+	color: #fff;
+}
+
+.autoclub-afandou-button:hover,
+.autoclub-afandou-button:focus,
+.autoclub-afandou-link-card a:hover,
+.autoclub-afandou-link-card a:focus {
+	filter: brightness(1.04);
+	transform: translateY(-1px);
+}
+
+.autoclub-afandou-hero::after {
+	height: 55px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.82));
+}

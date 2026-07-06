@@ -578,3 +578,46 @@ body.home .autoclub-header {
 		transition: none;
 	}
 }
+
+/* Final homepage polish: restore a touch of header breathing room. */
+.autoclub-header__inner {
+	min-height: 76px;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+}
+
+.autoclub-header__logo {
+	flex-basis: 222px;
+	width: 222px;
+	height: 66px;
+}
+
+.autoclub-header__logo img {
+	width: 222px;
+	transform: translateY(-36px);
+}
+
+.autoclub-header__menu > li > a,
+.autoclub-header__menu-link-wrap > a {
+	min-height: 50px;
+	padding-top: 0.62rem;
+	padding-bottom: 0.62rem;
+	font-size: 0.96rem;
+}
+
+@media (max-width: 921px) {
+	.autoclub-header__inner {
+		min-height: 66px;
+	}
+
+	.autoclub-header__logo {
+		flex-basis: 190px;
+		width: 190px;
+		height: 58px;
+	}
+
+	.autoclub-header__logo img {
+		width: 190px;
+		transform: translateY(-31px);
+	}
+}

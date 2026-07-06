@@ -145,7 +145,7 @@ $about_links = array(
 				</div>
 				<div>
 					<dt><?php esc_html_e( 'Phone', 'astra-child' ); ?></dt>
-					<dd><a href="tel:+306948202397">+30 694 820 2397</a></dd>
+					<dd><a href="tel:+306948202397">+30 6948202397</a></dd>
 				</div>
 				<div>
 					<dt><?php esc_html_e( 'Email', 'astra-child' ); ?></dt>
