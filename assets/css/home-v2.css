@@ -3307,4 +3307,27 @@ html:has(body.home) {
 	.autoclub-hero__copy {
 		transform: translateY(20px);
 	}
+
+	.autoclub-hero__benefits {
+		margin-bottom: 1.35rem;
+	}
+
+	.autoclub-search-card {
+		margin-top: 0.85rem;
+	}
+
+	.autoclub-booking-engine,
+	.autoclub-booking-engine__confirmation,
+	.autoclub-booking-confirmation,
+	.booking-confirmation,
+	.confirmation {
+		padding-bottom: max(2rem, env(safe-area-inset-bottom));
+	}
+
+	.autoclub-booking-engine__submit,
+	.autoclub-booking-engine button,
+	.autoclub-booking-engine .button,
+	.autoclub-booking-engine .btn {
+		margin-bottom: 0.75rem;
+	}
 }
