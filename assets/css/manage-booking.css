@@ -12,17 +12,17 @@
 }
 
 .autoclub-manage-booking__shell {
-	padding: clamp(5rem, 11vh, 7rem) 1.25rem clamp(3rem, 7vh, 4.5rem);
+	padding: clamp(3.75rem, 8vh, 5rem) clamp(1rem, 3vw, 2rem) clamp(2.5rem, 6vh, 4rem);
 }
 
 .autoclub-manage-booking__inner {
-	width: min(100%, 1180px);
+	width: min(100%, 1480px);
 	margin: 0 auto;
 }
 
 .autoclub-manage-booking__intro {
-	max-width: 780px;
-	margin: 0 auto 1.6rem;
+	max-width: 900px;
+	margin: 0 auto 1.4rem;
 	text-align: center;
 }
 
@@ -54,31 +54,27 @@
 }
 
 .autoclub-manage-booking__embed-wrap {
-	overflow: hidden;
-	border: 1px solid rgba(10, 32, 64, 0.1);
-	border-radius: 30px;
-	background: #fff;
-	box-shadow: 0 28px 80px rgba(10, 32, 64, 0.14);
+	overflow: visible;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	box-shadow: none;
 }
 
 .autoclub-manage-booking__embed {
 	display: block;
 	width: 100%;
-	min-height: 920px;
+	min-height: 760px;
 	border: 0;
-	background: #fff;
+	background: transparent;
 }
 
 @media (max-width: 780px) {
 	.autoclub-manage-booking__shell {
-		padding: 5.25rem 0.75rem 2.5rem;
-	}
-
-	.autoclub-manage-booking__embed-wrap {
-		border-radius: 22px;
+		padding: 4.75rem 0.75rem 2.25rem;
 	}
 
 	.autoclub-manage-booking__embed {
-		min-height: 1120px;
+		min-height: 1080px;
 	}
 }
