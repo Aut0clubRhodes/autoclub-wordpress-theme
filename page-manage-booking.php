@@ -27,6 +27,7 @@ $embed_src   = add_query_arg(
 get_header();
 ?>
 
+<!-- AUTOCLUB MANAGE BOOKING ROUTE LOADED -->
 <main id="primary" class="autoclub-manage-booking">
 	<section class="autoclub-manage-booking__shell" aria-labelledby="autoclub-manage-booking-title">
 		<div class="autoclub-manage-booking__inner">
