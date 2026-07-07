@@ -9,6 +9,57 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Detect the public Manage Booking path even if WordPress page resolution fails.
+ *
+ * The live site can route /manage-booking to a 404 before the slug template is
+ * selected. This keeps the published page URL working without changing booking
+ * engine logic or requiring a database rewrite flush.
+ */
+function autoclub_is_manage_booking_request() {
+	$path = isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '';
+	$path = (string) parse_url( $path, PHP_URL_PATH );
+	$path = trim( $path, '/' );
+
+	return 'manage-booking' === strtolower( $path );
+}
+
+add_filter(
+	'redirect_canonical',
+	function ( $redirect_url ) {
+		if ( autoclub_is_manage_booking_request() ) {
+			return false;
+		}
+
+		return $redirect_url;
+	}
+);
+
+add_action(
+	'template_redirect',
+	function () {
+		if ( ! autoclub_is_manage_booking_request() ) {
+			return;
+		}
+
+		$template = get_stylesheet_directory() . '/page-manage-booking.php';
+
+		if ( file_exists( $template ) ) {
+			global $wp_query;
+
+			if ( $wp_query ) {
+				$wp_query->is_404 = false;
+			}
+
+			status_header( 200 );
+			nocache_headers();
+			include $template;
+			exit;
+		}
+	},
+	0
+);
+
 add_action(
 	'wp_enqueue_scripts',
 	function () {
@@ -223,7 +274,7 @@ add_action(
 			);
 		}
 
-		if ( is_page( 'manage-booking' ) ) {
+		if ( is_page( 'manage-booking' ) || autoclub_is_manage_booking_request() ) {
 			$manage_booking_styles = get_stylesheet_directory() . '/assets/css/manage-booking.css';
 
 			wp_enqueue_style(
